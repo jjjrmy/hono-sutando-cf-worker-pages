@@ -4,7 +4,7 @@
     "dev": "run-p dev:*",
     "dev:wrangler": "wrangler pages dev dist --live-reload",
     "dev:esbuild": "esbuild --bundle src/index.ts --format=esm --watch --outfile=dist/_worker.js",
-    "build": "esbuild --bundle src/index.ts --format=esm --outfile=dist/_worker.js --platform=node",
+    "build": "esbuild src/index.ts --bundle --platform=node --format=esm --outfile=dist/_worker.js --external:better-sqlite3 --external:tedious --external:mysql --external:mysql2 --external:oracledb --external:pg --external:sqlite3 --external:pg-query-stream",
     "deploy:pages": "wrangler pages publish dist",
     "deploy:worker": "wrangler deploy --minify src/index.ts"
   },

@@ -1,11 +1,11 @@
 #:schema node_modules/wrangler/config-schema.json
 name = "sutando-cf"
 main = "src/index.ts"
-compatibility_date = "2024-08-29"
+compatibility_date = "2024-09-23"
 node_compat = true
-compatibility_flags = ["experimental:nodejs_compat_v2"]
+compatibility_flags = ["nodejs_compat_v2"]
 
 [[d1_databases]]
 binding = "DB"
-database_name = "sutando"
-database_id = "34a1f123-5f7f-41d3-a8b8-5561b29df848"
+database_name = "etf"
+database_id = "743b7634-c6f4-4378-b9fd-e2e3ed2b0907"

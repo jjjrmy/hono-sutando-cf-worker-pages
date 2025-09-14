@@ -21,6 +21,7 @@ app.get('/users', async (c) => {
 });
 
 app.onError((err, c) => {
+  console.error(err);
   if (err instanceof ModelNotFoundError) {
     return c.json({
       message: err.message

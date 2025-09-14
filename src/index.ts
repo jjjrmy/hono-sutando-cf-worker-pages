@@ -14,9 +14,7 @@ app.get('/', (c) => {
 })
 
 app.get('/users', async (c) => {
-  const users = await User.query().withCount({
-    posts: q => q.where('published', true)
-  }).get();
+  const users = await User.query().get();
   return c.json(users);
 });
 
